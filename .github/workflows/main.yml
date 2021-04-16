@@ -31,7 +31,9 @@ jobs:
           native-image: true
 
       - name: Install Native compile environment
-        run: sudo apt-get -y install build-essential libz-dev zlib1g-dev
+        run: |
+          sudo apt-get -y install build-essential libz-dev zlib1g-dev
+          gu install espresso
 
       - name: Compile demo
         run: sh build-espresso-jshell.sh
