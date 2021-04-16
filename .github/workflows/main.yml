@@ -25,6 +25,10 @@ jobs:
 
       - name: Setup GraalVM action
         uses: ayltai/setup-graalvm@v1
+        with:
+          java-version: 11
+          graalvm-version: 21.0.0.2
+          native-image: true
 
       - name: Install Native compile environment
         run: sudo apt-get -y install build-essential libz-dev zlib1g-dev
