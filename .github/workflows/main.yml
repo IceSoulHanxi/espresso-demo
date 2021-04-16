@@ -36,7 +36,9 @@ jobs:
           gu install espresso
 
       - name: Compile demo
-        run: sh build-espresso-jshell.sh
+        run: |
+          sh build-espresso-jshell.sh
+          ./espresso-jshell
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2
